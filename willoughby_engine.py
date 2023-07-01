@@ -2,9 +2,9 @@ from engine import Engine
 
 
 class WilloughbyEngine(Engine):
-    def __init__(self, current_mileage, last_service_mileage):
-        self.current_mileage = current_mileage
-        self.last_service_mileage = last_service_mileage
+    def __init__(self, curr_mileage, last_mileage):
+        self.curr_mileage = curr_mileage
+        self.last_mileage = last_mileage
 
     def needs_service(self):
-        return self.current_mileage - self.last_service_mileage > 60000
+        return self.curr_mileage - self.last_mileage > 60000
